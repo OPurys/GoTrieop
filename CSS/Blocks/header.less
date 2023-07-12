@@ -1,0 +1,128 @@
+// main: ../style.less
+
+.header {
+    padding-top: 2.93rem;
+    padding-bottom: 13.3rem;
+    
+    background: url("../img/header/Ellipse 1.png"), url("../img/header/Ellipse 2.png"), url("../img/header/Ellipse 3.png"), url("../img/header/Ellipse 4.png"), url("../img/header/Ellipse 5.png"), url("../img/header/Ellipse 6.png"), url("../img/header/Vector 5.png"), url("../img/header/Vector 5.png"), url("../img/header/Vector 5.png"), url("../img/header/Vector 5.png"), url("../img/header/Rectangle_3.png");
+    background-repeat: no-repeat;
+    background-position: 95% 78%, 94% 82.8%, 96.6% 80%, 51% 17%, 50.5% 21.5%, 52.7% 20%, 89% 25%, 94.5% 26.7%, 53% 88%, 58.5% 90%, center bottom;
+    background-size: auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, cover;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    z-index: 1000;
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 5.66rem;
+}
+
+.user {
+    font-size: 1.33rem;
+    font-weight: 700;
+    color: @white;
+}
+
+.nav {
+    font-size: 1rem;
+    font-weight: 500;
+
+    &.nav-right .nav__link {
+        margin-right: 1.66rem;
+    }
+
+    &.nav-right .nav__link:last-child {
+        margin-right: 0;
+    }
+
+}
+
+.nav__link {
+    text-decoration: none;
+    color: @white;
+    margin-right: 5.33rem;
+    position: relative;
+
+    &:nth-child(4) {
+        margin-right: 0;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-color: #C4C4C4;
+        bottom: -4px;
+        left: 0;
+        
+        height: 4px;
+        width: 0;
+        border-radius: 6.66rem;
+        transition: width 0.2s linear;
+    }
+
+    &:hover::after {
+        width: 35px;
+    }
+
+    &.nav__link--btn:hover:last-child::after {
+        width: 0;
+    }
+
+    &.nav__link--btn {
+        padding: .86rem 2.93rem;
+
+        font-family: inherit;
+
+        background: @gradient;
+        border-radius: 6.66rem;
+        border: 0;
+
+        &:focus {
+            outline: 0;
+        }
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+}
+
+.header__intro {
+    position: relative;
+}
+
+.header__content {
+    width: 100%;
+    max-width: 603px;
+}
+
+.header__title {
+    margin-bottom: 2rem;
+
+    font-size: 3.66rem;
+    font-weight: 600;
+    color: @white;
+}
+
+.header__text {
+    margin-bottom: 4.53rem;
+
+    width: 100%;
+    max-width: 519px;
+
+    font-size: 1.66rem;
+    font-weight: 500;
+    color: fade(@white, 50%);
+}
+
+.header__photo {
+    position: absolute;
+    top: -40px;
+    right: 0px;
+
+    width: 535px;
+}

@@ -1,3 +1,41 @@
 // compress: true
 
 @import "vars";
+
+
+html {
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    color: @black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+p {
+    margin: 0 0 1rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// Blocks
+
+@import "blocks/container";
+@import "blocks/header";
+@import "blocks/btn";
