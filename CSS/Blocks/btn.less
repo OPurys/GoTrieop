@@ -8,7 +8,7 @@
     font-weight: 600;
     font-family: inherit;
 
-    color: @white;
+    color: @white-shade;
     background: @gradient;
     border: 0;
     border-radius: 1.8rem;
@@ -23,7 +23,30 @@
 
         font-size: 1.2rem;
         font-weight: 500;
+        color: @white;
+    }
+
+    &--sm {
+        font-size: 1.33rem;
+        font-weight: 600;
+        color: @white-shade;
+    }
+
+    &--sm--long {
+        padding: 1.73rem 3.66rem;
+    }
+
+    &--slider {
+        padding: 1.73rem;
         
+        border-radius: 50%;
+        font-size: 0;
+
+        position: absolute;
+        left: -25px;
+        top: 44%;
+        transform: translateY(-44%);
+        z-index: 3;
     }
 
     &:focus {

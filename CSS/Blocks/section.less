@@ -1,0 +1,54 @@
+// main: ../style.less
+
+.section {
+    padding: 7.66rem 0 4.46rem;
+}
+
+.section__inner {
+    padding: 7.66rem 0;
+
+    background-color: @white;
+    border-radius: 4rem;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 56px;
+        left: 74px;
+
+        width: 63px;
+        height: 83px;
+
+        background: url("../img/section/Group 2.png");
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 74px;
+        right: 80px;
+
+        width: 63px;
+        height: 83px;
+
+        background: url("../img/section/Group 1.png");
+    }
+}
+
+.section__title {
+    margin-bottom: 2rem;
+
+    font-size: 3rem;
+    font-weight: 500;
+    color: @black;
+}
+
+.section__text {
+    margin-bottom: 4rem;
+
+    font-size: 2rem;
+    font-weight: 400;
+    color: fade(@black, 50%);
+}
