@@ -1,16 +1,11 @@
 // main: ../style.less
 
 .header {
-    padding-top: 2.93rem;
-    padding-bottom: 13.3rem;
-    
-    background: url("../img/header/Ellipse 1.png"), url("../img/header/Ellipse 2.png"), url("../img/header/Ellipse 3.png"), url("../img/header/Ellipse 4.png"), url("../img/header/Ellipse 5.png"), url("../img/header/Ellipse 6.png"), url("../img/header/Vector 5.png"), url("../img/header/Vector 5.png"), url("../img/header/Vector 5.png"), url("../img/header/Vector 5.png"), url("../img/header/Rectangle_3.png");
-    background-repeat: no-repeat;
-    background-position: 95% 78%, 94% 82.8%, 96.6% 80%, 51% 17%, 50.5% 21.5%, 52.7% 20%, 89% 25%, 94.5% 26.7%, 53% 88%, 58.5% 90%, center bottom;
-    background-size: auto, auto, auto, auto, auto, auto, auto, auto, auto, auto, cover;
+    padding: 2.93rem 0 13.3rem;
+    background: url("../img/header/Rectangle_3.png") bottom no-repeat;
+    background-size: cover;
     border-top-left-radius: 100px;
     border-top-right-radius: 100px;
-    z-index: 1000;
 }
 
 .header__inner {
@@ -39,6 +34,18 @@
         margin-right: 0;
     }
 
+    &.show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        &.show .nav__link {
+            margin-right: 0;
+        }
+    }
+
+   
+
 }
 
 .nav__link {
@@ -57,7 +64,7 @@
         background-color: #C4C4C4;
         bottom: -4px;
         left: 0;
-        
+
         height: 4px;
         width: 0;
         border-radius: 6.66rem;
@@ -92,8 +99,14 @@
     }
 }
 
+.burger {
+    display: none;
+}
+
 .header__intro {
-    position: relative;
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .header__content {
@@ -120,10 +133,80 @@
     color: fade(@white, 50%);
 }
 
+.header__container {
+    width: 100%;
+    max-width: 549px;
+    position: relative;
+
+    &--bg {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -10%;
+        z-index: 1;
+
+        width: 63px;
+        height: 83px;
+
+        fill: #ffffff;
+        background: url("../img/header/Group 3.png") center no-repeat;
+    }
+
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: -5%;
+        right: -15%;
+        z-index: 1;
+
+        width: 63px;
+        height: 83px;
+
+        fill: fade(@white, 10%);
+        background: url("../img/header/Group 4.png") center no-repeat;
+    }
+}
+
+.span {
+    font-size: 0;
+    color: transparent;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -20%;
+        left: -5%;
+        z-index: 1;
+
+        width: 170px;
+        height: 50px;
+
+        background: url("../img/header/Group 5.png") center no-repeat;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 12%;
+        left: 70%;
+        z-index: 1;
+
+        width: 170px;
+        height: 50px;
+
+        background: url("../img/header/Group 5.png") center no-repeat;
+    }
+}
+
 .header__photo {
     position: absolute;
-    top: -40px;
+    bottom: -31.5%;
     right: 0px;
-
-    width: 535px;
 }
