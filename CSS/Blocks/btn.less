@@ -11,19 +11,35 @@
     color: @white-shade;
     background: @gradient;
     border: 0;
-    border-radius: 1.8rem;
+    border-radius: 1.08em;
     cursor: pointer;
+
+    @media @mobile-sm {
+        font-size: 1.4rem;
+    }
+
+    @media @mobile-very-sm {
+        font-size: 1.2rem;
+    }
 
     &--thin {
         margin-bottom: .38em;
         padding: .66em 1.72em;
 
-        border-radius: 1rem;
+        border-radius: .83em;
         background: fade(@white, 25%);
 
         font-size: 1.2rem;
         font-weight: 500;
         color: @white;
+
+        @media @mobile-sm {
+            font-size: 1rem;
+        }
+
+        @media @mobile-very-sm {
+            font-size: .8rem;
+        }
     }
 
     &--sm {
@@ -32,6 +48,15 @@
         font-size: 1.33rem;
         font-weight: 600;
         color: @white-shade;
+        border-radius: 1.35em;
+
+        @media @mobile-sm {
+            font-size: 1.15rem;
+        }
+
+        @media @mobile-very-sm {
+            font-size: 1rem;
+        }
     }
 
     &--sm--long {
@@ -49,25 +74,38 @@
 
     &--slider {
         padding: 1.73rem;
-        
+
         border-radius: 50%;
         font-size: 0;
 
         position: absolute;
-        left: 41%;
-        top: 39%;
-        z-index: 3;
+        left: -25px;
+        top: 40%;
+        z-index: 1;
+
+        @media @mobile {
+            padding: 1.3rem;
+            left: -15px;
+        }
     }
 
     &--sub {
         padding: 1.36em 3.48em;
 
-        border-radius: 2.33rem;
+        border-radius: 1.4em;
 
         position: absolute;
         top: 12px;
-        right: 18%;
+        right: 15px;
         z-index: 1;
+
+        @media @mobile {
+            margin-top: 1rem;
+            width: 100%;
+
+            position: static;
+
+        }
     }
 
     &:focus {

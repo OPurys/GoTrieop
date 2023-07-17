@@ -5,7 +5,7 @@
     text-align: center;
 
     @media @mobile-sm {
-        padding: 1.53rem 0 1rem;
+        padding: 2.53rem 0 1rem;
     }
 }
 
@@ -25,12 +25,8 @@
     }
 }
 
-.form {
-    position: relative;
-}
-
 .input {
-    padding: 3.1rem;
+    padding: 1.95em;
 
     width: 100%;
     max-width: 800px;
@@ -43,9 +39,17 @@
     color: fade(@black, 50%);
     background-color: @white;
     border: 0;
-    border-radius: 2.33rem;
+    border-radius: 1.45em;
 
     &:focus {
         outline: 0;
+    }
+
+    @media @mobile-sm {
+        font-size: 1.4rem;
+    }
+
+    @media @mobile-very-sm {
+        font-size: 1.2rem;
     }
 }
