@@ -82,11 +82,13 @@
                 <div class="choice__slider js--choice__slider">
                     <div class="choice__sliderline js--choice__sliderline">
                         <img class="choice__photo js--choice__photo" src="img\choice\Rectangle 24.jpg" alt="">
-                        <img class="choice__photo choice__photo--big js--choice__photo" src="img\choice\Rectangle 25.jpg" alt="">
+                        <img class="choice__photo choice__photo--big js--choice__photo"
+                            src="img\choice\Rectangle 25.jpg" alt="">
                         <img class="choice__photo js--choice__photo" src="img\choice\Rectangle 24.jpg" alt="">
                     </div>
                 </div>
-                <button class="btn btn--slider js--btn--slider" type="button"><img src="img\choice\Vector 1.svg" alt=""></button>
+                <button class="btn btn--slider js--btn--slider" type="button"><img src="img\choice\Vector 1.svg"
+                        alt=""></button>
             </div>
         </div> <!-- /.container -->
     </section>
@@ -112,19 +114,30 @@
                         </div>
                     </div>
 
-
                     <div class="about__text">
                         <p>Very satisfying service makes it comfortable, a beautiful place in the world.</p>
                     </div>
-                    <div class="about__rating">
-                        <img class="about__star" src="img\about\Star 1.svg" alt="">
-                        <img class="about__star" src="img\about\Star 1.svg" alt="">
-                        <img class="about__star" src="img\about\Star 1.svg" alt="">
-                        <img class="about__star" src="img\about\Star 4.svg" alt="">
-                        <img class="about__star" src="img\about\Star 4.svg" alt="">
-                    </div>
-                </div>
 
+                    <form class="about__form" action="/" method="get">
+                        <div class="about__rating about__rating-set">
+
+                            <div class="about__rating-body">
+                                <div class="about__rating-active"></div>
+                                <div class="about__rating-items">
+                                    <input class="about__rating-item" type="radio" name="about__rating-item" value="1">
+                                    <input class="about__rating-item" type="radio" name="about__rating-item" value="2">
+                                    <input class="about__rating-item" type="radio" name="about__rating-item" value="3">
+                                    <input class="about__rating-item" type="radio" name="about__rating-item" value="4">
+                                    <input class="about__rating-item" type="radio" name="about__rating-item" value="5">
+                                </div>
+                            </div>
+
+                            <div class="about__rating-value">3.7</div>
+                        </div> <!-- /.about__rating -->
+
+                        <button class="btn btn--about__form" type="submit">Submit</button>
+                    </form>
+                </div> <!-- /.about__content -->
             </div><!-- /.about__inner -->
         </div> <!-- /.container -->
     </section>
@@ -190,7 +203,8 @@
     <!-- JS -->
     <script src="js\burger_header-fixed.js"></script>
     <script src="js\slider.js"></script>
-    
+    <script src="js\rating.js"></script>
+
 </body>
 
 </html>

@@ -145,10 +145,14 @@
         background-color: #C4C4C4;
 
         transition: width 0.2s linear;
+
+        @media @mobile-sm {
+            height: 2px;
+        }
     }
 
     &:hover::after {
-        width: 35px;
+        width: 100%;
     }
 
     &--btn:hover:last-child::after {

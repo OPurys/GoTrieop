@@ -7,21 +7,21 @@ burger.onclick = function () {
     nav.classList.toggle('show');
 }
 
-document.onkeydown = function(evt) {
+document.onkeydown = function (evt) {
     if (evt.key === 'Escape') {
         remove();
     }
 }
 
-document.onmouseup = function(evt) {
+document.onmouseup = function (evt) {
     if (!burger.contains(evt.target) && !nav.contains(evt.target)) {
         remove();
-    } 
+    }
 }
 
 function remove() {
     nav.classList.remove('show');
-} 
+}
 
 // Header fixed
 window.onscroll = function () {
@@ -29,6 +29,8 @@ window.onscroll = function () {
         headerInner.classList.add('fixed');
     } else { headerInner.classList.remove('fixed'); }
 }
+
+
 
 
 

@@ -9,7 +9,7 @@ let sliderCount = 0;
 let width = 0;
 
 
-sliderImages.forEach(item => width = item.clientWidth);
+sliderImages.forEach(item => width = item.clientWidth + 30);
 
 btnNext.onclick = (nextSlide);
 
