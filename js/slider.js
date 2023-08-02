@@ -9,7 +9,7 @@ let sliderCount = 0,
 window.addEventListener('resize', showSlide);
 
 function showSlide() {
-    sliderImages.forEach((item) => width = item.clientWidth + 30);
+    sliderImages.forEach(item => width = item.clientWidth + 30);
 
     rollSlide();
 }

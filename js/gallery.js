@@ -5,6 +5,8 @@ const modalDialog = document.querySelector('.modal__dialog');
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 const closeBtn = document.getElementById('close');
+const body = document.body;
+
 
 let cardIndex = 0;
 let pictureFull = null;
@@ -29,6 +31,7 @@ const showPicture = () => {
     pictureFull.style.width = '100%';
     modalDialog.append(pictureFull);
     modal.classList.remove('hidden');
+    body.classList.add('no-scroll');
 }
 
 const changePicture = (dir) => {
@@ -47,12 +50,25 @@ const changePicture = (dir) => {
     pictureFull = newPictureFull;
 }
 
-
 const closeSlider = () => {
     pictureFull && pictureFull.remove();
 
     newPictureFull && newPictureFull.remove();
 
     modal.classList.add('hidden');
+    body.classList.remove('no-scroll');
+}
+
+
+document.onkeydown = (evt) => {
+    if (evt.key === 'Escape') {
+        closeSlider();
+    }
+}
+
+modal.onclick = (evt) => {
+    if (!modalDialog.contains(evt.target)) {
+        closeSlider();
+    }
 }
 

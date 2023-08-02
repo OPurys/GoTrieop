@@ -3,17 +3,17 @@ const burger = document.querySelector('.js--burger');
 const nav = document.querySelector('.js--nav');
 const headerInner = document.querySelector('.js--header__inner');
 
-burger.onclick = function () {
+burger.onclick = () => {
     nav.classList.toggle('show');
 }
 
-document.onkeydown = function (evt) {
+document.onkeydown = (evt) => {
     if (evt.key === 'Escape') {
         remove();
     }
 }
 
-document.onmouseup = function (evt) {
+document.onmouseup = (evt) => {
     if (!burger.contains(evt.target) && !nav.contains(evt.target)) {
         remove();
     }
@@ -24,7 +24,7 @@ function remove() {
 }
 
 // Header fixed
-window.onscroll = function () {
+window.onscroll = () => {
     if (window.scrollY > headerInner.clientHeight) {
         headerInner.classList.add('fixed');
     } else { headerInner.classList.remove('fixed'); }
