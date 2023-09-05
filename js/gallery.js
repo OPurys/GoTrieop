@@ -59,7 +59,6 @@ const closeSlider = () => {
     body.classList.remove('no-scroll');
 }
 
-
 document.onkeydown = (evt) => {
     if (evt.key === 'Escape') {
         closeSlider();

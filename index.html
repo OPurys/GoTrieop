@@ -7,6 +7,7 @@
     <title>GoTrieop</title>
     <link rel="icon" type="image/svg+xml" href="img\favicon.svg">
     <link rel="icon" type="image/png" href="img\favicon.png">
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/style.css">
 </head>
@@ -68,7 +69,6 @@
     <!-- Choice -->
     <section class="choice">
         <div class="container container--big">
-
             <div class="choice__content">
                 <h3 class="choice__suptitle">Choice Of </h3>
                 <h2 class="choice__title">Destinations</h2>
@@ -79,16 +79,25 @@
             </div>
 
             <div class="choice__container">
-                <div class="choice__slider js--choice__slider">
-                    <div class="choice__sliderline js--choice__sliderline">
-                        <img class="choice__photo js--choice__photo" src="img\choice\Rectangle 24.jpg" alt="">
-                        <img class="choice__photo choice__photo--big js--choice__photo"
-                            src="img\choice\Rectangle 25.jpg" alt="">
-                        <img class="choice__photo js--choice__photo" src="img\choice\Rectangle 24.jpg" alt="">
+                <div class="swiper choice__slider">
+                    <div class="swiper-wrapper choice__sliderline">
+                        <div class="swiper-slide choice__slide">
+                            <img class="choice__photo" src="img\choice\photo-1.jpg" alt="forest">
+                        </div>
+                        <div class="swiper-slide choice__slide">
+                            <img class="choice__photo" src="img\choice\photo-2.jpg" alt="forest">
+                        </div>
+                        <div class="swiper-slide choice__slide">
+                            <img class="choice__photo" src="img\choice\photo-3.jpg" alt="forest">
+                        </div>
+                        <div class="swiper-slide choice__slide">
+                            <img class="choice__photo" src="img\choice\photo-4.jpeg" alt="forest">
+                        </div>
                     </div>
                 </div>
-                <button class="btn btn--slider js--btn--slider" type="button"><img src="img\choice\Vector 1.svg"
-                        alt=""></button>
+                <button class="btn btn--slider" type="button" id="left">
+                    <img src="img\choice\Vector 1.svg" alt="">
+                </button>
             </div>
         </div> <!-- /.container -->
     </section>
@@ -246,8 +255,9 @@
     </div>
 
     <!-- JS -->
+    <script src="js\swiper-bundle.min.js"></script>
+    <script src="js\swiper.js"></script>
     <script src="js\burger_header-fixed.js"></script>
-    <script src="js\slider.js"></script>
     <script src="js\rating.js"></script>
     <script src="js\gallery.js"></script>
 
