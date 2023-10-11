@@ -66,6 +66,22 @@
     width: 100%;
     max-width: 870px;
     overflow: hidden;
+
+    @media @desktop {
+        max-width: 700px;
+    }
+
+    @media @notebook {
+        max-width: 600px;
+    }
+
+    @media @mobile-sm {
+        max-width: 375px;
+    }
+
+    @media @mobile-very-sm {
+        max-width: 300px;
+    }
 }
 
 .choice__sliderline {
@@ -79,11 +95,11 @@
     display: block;
     width: 100%;
     max-width: 870px;
-    height: 456px;
+    height: 402px;
 
     border-radius: 35px;
 
-    @media @mobile-very-sm {
+    @media @tablet {
         height: auto;
     }
 }

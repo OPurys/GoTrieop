@@ -12,10 +12,6 @@ const swiper = new Swiper('.swiper', {
         enabled: true,
     },
 
-    mousewheel: {
-        sensitivity: 1,
-    },
-
     navigation: {
         prevEl: '.btn--slider',
     },

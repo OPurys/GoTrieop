@@ -9,7 +9,7 @@
     font-weight: 600;
     font-family: inherit;
     color: @white-shade;
-    
+
     background: @gradient;
     border: 0;
     border-radius: 1.08em;
@@ -73,6 +73,13 @@
         }
     }
 
+    &__img {
+
+        @media @mobile-sm {
+            width: 10px;
+        }
+    }
+
     &--slider {
         padding: 1.73rem;
 
@@ -87,6 +94,15 @@
         @media @mobile {
             padding: 1.3rem;
             left: -15px;
+        }
+
+        @media @mobile-sm {
+            padding: 1rem;
+        }
+
+        @media @mobile-very-sm {
+            padding: 0.7rem;
+            left: -10px;
         }
     }
 
@@ -172,7 +188,7 @@
 
         &:focus {
             outline: 0;
-        }    
+        }
     }
 
     &:focus {
